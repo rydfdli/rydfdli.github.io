@@ -1,0 +1,139 @@
+
+body{
+    background-color: #f0f0f0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar-light .navbar-toggler{
+    border: none;
+}
+
+.btn-blue{
+    background-color: #1D39E9;
+}
+.form-control{
+    background-color: rgb(240, 240, 240);
+    border: none;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.form-control:focus{
+    border-color: #ff436c;
+    box-shadow: 0 0 0px .25rem rgb(255 67 108 / 70%);
+}
+
+/* .form-control::placeholder{
+    color: #ff436c;
+} */
+
+.btn-blue:hover{
+    background-color: #5493EF;
+}
+
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+
+.profile, .education, .skill, .contact{
+    background-color: #fff;
+}
+
+.content-text{
+    color: #263238;
+}
+.skill{
+    list-style: none;
+}
+
+.active{
+    color: #ff436c !important;
+}
+
+.btn:focus{
+    box-shadow: none;
+}
+.navbar-light .navbar-nav .nav-link:hover{
+    color: #ff436c;
+}
+
+ul.timeline {
+    list-style-type: none;
+    position: relative;
+}
+ul.timeline:before {
+    content: ' ';
+    background: #d4d9df;
+    display: inline-block;
+    position: absolute;
+    left: 29px;
+    width: 2px;
+    height: 100%;
+    z-index: 400;
+}
+ul.timeline > li {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+ul.timeline > li:before {
+    content: ' ';
+    background: white;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #ff436c;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    z-index: 400;
+}
+
+.stories{
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+.stories svg{
+    fill:none;
+    stroke:#ff436c;
+    stroke-linecap: round;
+    stroke-width:3;
+    stroke-dasharray: 1;
+    stroke-dashoffset: 0;
+    animation: stroke-draw 6s ease-out infinite alternate;
+}
+
+@keyframes stroke-draw {
+    from{
+        stroke:#8a3ab9;
+        stroke-dasharray: 1;
+      }
+      to{
+        stroke:#cd486b;
+        transform:rotate(180deg);
+        stroke-dasharray: 8;
+      }
+  }
+  
+
+.stories img{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%, -50%);
+    width:70px;
+    height: 70px;
+    border-radius:50%;
+}
+
+.bg-word{
+    background-color: #ffd6df;
+    border-radius: 20px;
+    max-height: 220px;
+}
+
+/* @media screen and (max-width : 768px) {
+    .bg-word{
+        max-height: 200px;
+    }
+} */
