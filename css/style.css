@@ -4,34 +4,11 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 
-.navbar-light .navbar-toggler{
-    border: none;
-}
-
-.btn-blue{
-    background-color: #1D39E9;
-}
-.form-control{
-    background-color: rgb(240, 240, 240);
-    border: none;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-}
-.form-control:focus{
-    border-color: #ff436c;
-    box-shadow: 0 0 0px .25rem rgb(255 67 108 / 70%);
-}
-
-/* .form-control::placeholder{
-    color: #ff436c;
-} */
-
-.btn-blue:hover{
-    background-color: #5493EF;
-}
-
-.navbar-toggler:focus{
-    box-shadow: none;
+/* UTILS */
+.bg-word{
+    background-color: #ffd6df;
+    border-radius: 20px;
+    max-height: 220px;
 }
 
 .profile, .education, .skill, .contact{
@@ -41,20 +18,55 @@ body{
 .content-text{
     color: #263238;
 }
+
 .skill{
     list-style: none;
 }
 
+/* NAVBAR */
+.navbar-light .navbar-toggler{
+    border: none;
+}
+
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+
 .active{
-    color: #ff436c !important;
+    color: #043b5c !important;
+}
+
+.navbar-light .navbar-nav .nav-link:hover{
+    color: #043b5c;
+}
+
+/* BUTTON CONFIG */
+.btn-blue{
+    background-color: #043b5c;
+}
+
+.btn-blue:hover{
+    background-color: #002a45;
 }
 
 .btn:focus{
     box-shadow: none;
 }
-.navbar-light .navbar-nav .nav-link:hover{
-    color: #ff436c;
+
+
+/* FORM */
+.form-control{
+    background-color: rgb(240, 240, 240);
+    border: none;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
+.form-control:focus{
+    border-color: #043b5c;
+    box-shadow: 0 0 0px .25rem #043a5ca4;
+}
+
+/* TIMELINE */
 
 ul.timeline {
     list-style-type: none;
@@ -80,28 +92,33 @@ ul.timeline > li:before {
     display: inline-block;
     position: absolute;
     border-radius: 50%;
-    border: 3px solid #ff436c;
+    border: 3px solid #043b5c;
     left: 20px;
     width: 20px;
     height: 20px;
     z-index: 400;
 }
 
+/* AVATAR */
+
 .stories{
     position: relative;
     width: 100px;
     height: 100px;
+    cursor: pointer;
 }
 
 .stories svg{
     fill:none;
-    stroke:#ff436c;
+    stroke:#043b5c;
     stroke-linecap: round;
     stroke-width:3;
     stroke-dasharray: 1;
     stroke-dashoffset: 0;
-    animation: stroke-draw 6s ease-out infinite alternate;
+    animation: stroke-draw 3s ease-out infinite alternate;
+    animation-play-state: paused;
 }
+
 
 @keyframes stroke-draw {
     from{
@@ -109,7 +126,7 @@ ul.timeline > li:before {
         stroke-dasharray: 1;
       }
       to{
-        stroke:#cd486b;
+        stroke:#002a45;
         transform:rotate(180deg);
         stroke-dasharray: 8;
       }
@@ -126,11 +143,7 @@ ul.timeline > li:before {
     border-radius:50%;
 }
 
-.bg-word{
-    background-color: #ffd6df;
-    border-radius: 20px;
-    max-height: 220px;
-}
+
 
 /* @media screen and (max-width : 768px) {
     .bg-word{
