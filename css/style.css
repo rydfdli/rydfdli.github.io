@@ -84,9 +84,6 @@ ul.timeline:before {
     z-index: 400;
 }
 
-.bg-danger{
-   background: #d4d9df !important;
-}
 
 ul.timeline > li {
     margin: 20px 0;
