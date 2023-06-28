@@ -73,7 +73,7 @@
               </div>
             </div>
             <h1 class="fw-bold" style="color: #043b5c;">I'm Riyadi</h1>
-            <p class="content-text text-black-50"></p>
+            <p id="contentText" class="content-text text-black-50"></p>
             <a href="#" class="btn btn-blue fs-5 px-4 py-2 mt-2 text-light"><i class="fa fa-cloud-download me-2"
                 aria-hidden="true"></i>Download CV</a>
           </div>
@@ -364,6 +364,14 @@
         sw.style.animationPlayState = 'paused';
       }
     });
+
+new TypeIt("#contentText", {
+  strings: "This is a simple string.",
+  speed: 50,
+  waitUntilVisible: true,
+}).go();
+
+
   </script>
   <!-- Option 2: Separate Popper and Bootstrap JS -->
   <!--
