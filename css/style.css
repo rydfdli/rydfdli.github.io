@@ -85,7 +85,7 @@ ul.timeline:before {
 }
 
 .bg-danger{
-   background: #d4d9df;
+   background: #d4d9df !important;
 }
 
 ul.timeline > li {
