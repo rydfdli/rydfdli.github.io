@@ -25,7 +25,7 @@ body{
 }
 
 .bg-blur{
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: red;
     -webkit-backdrop-filter: blur(16px);
     backdrop-filter: blur(16px);
 }
