@@ -30,6 +30,10 @@ body{
     backdrop-filter: blur(16px);
 }
 
+.emote {
+   transform: rotate(90deg);
+}
+
 /* NAVBAR */
 .navbar-light .navbar-toggler{
     border: none;
