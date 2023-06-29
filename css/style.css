@@ -47,7 +47,7 @@
 
 .emote {
    transform: rotate(0deg);
-   transform-origin: 100% 70%;
+   transform-origin: center;
    display: inline-block;
    animation-name: example;
    animation-duration: 0.7s;
