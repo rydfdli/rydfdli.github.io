@@ -27,10 +27,11 @@
     background-color: rgba(236, 254, 255, 0.001);
    -webkit-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
+   transition: all 0.7s;
 }
 
 .skill-group:hover{
-   background-color: rgba(236, 254, 255, 0.1);
+   background-color: rgba(254, 254, 255, 0.001);
    -webkit-backdrop-filter: blur(14px);
     backdrop-filter: blur(14px);
 }
