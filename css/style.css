@@ -24,7 +24,7 @@
 }
 
 .skill-group{
-    background-color: rgba(236, 254, 255, 0.001);
+    background-color: rgba(0, 42, 69, 0.1);
    -webkit-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
    transition: all 1s;
