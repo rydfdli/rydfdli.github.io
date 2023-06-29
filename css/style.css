@@ -29,6 +29,12 @@
     backdrop-filter: blur(4px);
 }
 
+.skill-group:hover{
+   background-color: rgba(236, 254, 255, 0.1);
+   -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+}
+
 .bg-danger{
     background-color: #002a45 !important;
 }
