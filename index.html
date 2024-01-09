@@ -72,10 +72,11 @@
                 </svg>
               </div>
             </div>
-            <h1 class="fw-bold" style="color: #043b5c;">Hello<span class="emote">👋🏻</span>,I'm Riyadi</h1>
+            <!-- Hello<span class="emote">👋🏻</span>,I'm  -->
+            <h1 class="fw-bold" style="color: #043b5c;">Riyadi Fadli</h1>
             <p id="contentText" class="content-text text-black-50"></p>
-            <a href="#" class="btn btn-blue fs-5 px-4 py-2 mt-2 text-light"><i class="fa fa-cloud-download me-2"
-                aria-hidden="true"></i>Download CV</a>
+            <!-- <a href="#" class="btn btn-blue fs-5 px-4 py-2 mt-2 text-light"><i class="fa fa-cloud-download me-2"
+                aria-hidden="true"></i>Download CV</a> -->
           </div>
         </div>
       </div>
@@ -145,7 +146,8 @@
             <img src="img/portfolio/1.png" alt="berita">
             <div class="card-body">
               <h5 class="fw-bold" style="color: #043b5c;">WEB BERITA</h5>
-              <p class="card-text">Ini adalah web yang menampilkan rss berita dari berbagai Plaform berita, menggunakan Rest API</p>
+              <p class="card-text">Ini adalah web yang menampilkan rss berita dari berbagai Plaform berita, menggunakan
+                Rest API</p>
               <div class="d-flex justify-content-between align-items-center">
                 <a href="https://beritaku-lovat.vercel.app/" class="btn btn-blue text-light py-2 px-4">Kunjungi</a>
                 <!-- <div class="btn-group">
@@ -165,7 +167,26 @@
               <h5 class="fw-bold" style="color: #043b5c;">LANDING PAGE</h5>
               <p class="card-text">Ini adalah Landing page untuk menampilkan atau promosi tempat makan</p>
               <div class="d-flex justify-content-between align-items-center">
-                <a href="https://lighthearted-caramel-e0f5f6.netlify.app/" class="btn btn-blue text-light py-2 px-4">Kunjungi</a>
+                <a href="https://lighthearted-caramel-e0f5f6.netlify.app/"
+                  class="btn btn-blue text-light py-2 px-4">Kunjungi</a>
+                <!-- <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div> -->
+                <!-- <small class="text-body-secondary">9 mins</small> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col" data-aos="fade-up">
+          <div class="card shadow-sm">
+            <img src="img/portfolio/4.png" alt="berita">
+            <div class="card-body">
+              <h5 class="fw-bold" style="color: #043b5c;">SISTEM INFOMASI ASET DESA</h5>
+              <p class="card-text">Aplikasi untuk pengelolaan aset desa</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <a href="https://mlbb-heroes.vercel.app/" class="btn btn-blue text-light py-2 px-4">Kunjungi</a>
                 <!-- <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
                   <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
@@ -193,6 +214,7 @@
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </div>
@@ -384,31 +406,27 @@
           <div class="contact p-4 rounded-3 mb-3 shadow-sm" data-aos="zoom-in">
             <h5 class="fw-bold fs-4">Contact</h5>
             <p class="fw-bold">Just Say, Hello!</p>
-            <form>
+            <form class="whatsapp-form">
               <div class="row mb-3">
                 <div class="col-md-6 mb-3">
-                  <input type="text" class="form-control" id="InputFirstName" placeholder="First Name">
-                </div>
-                <div class="col-md-6">
-                  <input type="text" class="form-control" id="InputLastName" placeholder="Last Name">
+                  <input type="text" class="form-control" id="name" placeholder="First Name" name="name">
                 </div>
               </div>
               <div class="row mb-3">
-                <div class="col-md-6 mb-3">
+                <!-- <div class="col-md-6 mb-3">
                   <input type="email" class="form-control" id="InputEmail" placeholder="Mail">
-                </div>
+                </div> -->
                 <div class="col-md-6">
-                  <input type="text" class="form-control" id="InputPhone" placeholder="Phone">
+                  <input type="text" class="form-control" id="phone" placeholder="Phone" name="phone">
                 </div>
               </div>
               <div class="row mb-3">
-                <div class="col-12">
-                  <textarea class="form-control" id="InputTextarea" rows="3"></textarea>
+                <div class="col-md-6 col-12 ">
+                  <textarea class="form-control" id="message" rows="3" name="message"
+                    placeholder="Message"></textarea>
                 </div>
               </div>
-              <a href="https://api.whatsapp.com/send?phone=+6287755369035"
-                class="btn btn-blue text-light py-2 px-4">Submit</a>
-
+              <a id="whatsapp-link" href="" target="_blank" class="btn btn-blue text-light py-2 px-4">Submit</a>
 
             </form>
           </div>
@@ -453,6 +471,27 @@
       speed: 50,
       waitUntilVisible: true,
     }).go();
+  </script>
+  <script>
+    document.getElementById('whatsapp-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      const nama = document.getElementById('name').value;
+      const phone = document.getElementById('phone').value;
+      const pesan = document.getElementById('message').value;
+
+
+      var nomorWhatsApp = '6287755369035';
+
+
+      var whatsappLink = 'https://wa.me/' + nomorWhatsApp + '?text=' + encodeURIComponent('Halo ' + nama + ', ' + phone + ', ' +
+        pesan);
+
+
+      document.getElementById('whatsapp-link').setAttribute('href', whatsappLink);
+
+      window.open(whatsappLink, '_blank');
+    });
   </script>
   <!-- Option 2: Separate Popper and Bootstrap JS -->
   <!--
